@@ -1,0 +1,33 @@
+#include <iostream>
+
+int dsa(int num, int power);
+
+int main()
+{
+    int number, power;
+
+    std::cout << "Chislo x : ";
+
+    std::cin >> number;
+
+    std::cout << "Chislo a: ";
+
+    std::cin >> power;
+
+    std::cout << "x^a= "<< dsa(number, power);
+    std::cout  << "       ";
+    std::cout << "a^x= " << dsa(power, number);
+    return 0;
+}
+
+int dsa(int num, int power)
+{
+    int temp = 1;
+
+    for (int i = 0; i < power; i++) {
+        temp *= num;
+    }
+
+    return temp;
+}
+
